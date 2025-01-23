@@ -16,7 +16,7 @@ En esta práctica se va a desarrollar un sitio web con la finalidad de aprender 
 6. Establecer diferentes diseños para diferentes tamaños de pantalla.
 7. Seleccionar y utilizar los diferentes contenedores que proporciona CSS.
 
-# Preparando el entorno
+## Preparando el entorno
 
 - **La práctica se realiza por parejas**
 - Se da libertad para seleccionar el IDE.
