@@ -1,5 +1,7 @@
 # Práctica CSS. Módulo LMSGI
 
+
+
 ## Introducción
 
 En esta práctica se va a desarrollar un sitio web con la finalidad de aprender las características de CSS. Se trata de diseñar un sitio "resposie"  adaptable a distintos tamaños de pantalla.
@@ -14,6 +16,13 @@ En esta práctica se va a desarrollar un sitio web con la finalidad de aprender 
 6. Establecer diferentes diseños para diferentes tamaños de pantalla.
 7. Seleccionar y utilizar los diferentes contenedores que proporciona CSS.
 
+# Preparando el entorno
+
+- **La práctica se realiza por parejas**
+- Se da libertad para seleccionar el IDE.
+- Se ha de crear un repositorio en GitHub y añadir como colaboradores a: Compañero/a, rgmf (Román Martínez) y pasantiagosantig (Pedro Antonio)
+- La entrega se realizará para LMSGI en Aules y para ED en el propio GitHub en la fecha indicada en el Aules del módulo.
+  
 ## Enunciado
 
 Nos han pedido crear un pequeño sitio web  para una empresa que pretende ofrecer vídeo bajo demanda, al estilo de Netflix, Amazon Prime o HBO Max. El sitio debe tener un diseño **adaptable** a distintos tamaños de pantalla y proporcionar una experiencia de usuario agradable.
