@@ -30,16 +30,20 @@ ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de
     background-color: #4CAF50;
     color: white;
     text-align: left;
+    text-align: center;
 }
 #barra2 {
     grid-area: barra2;
     background-color: #f4f4f4;
+    text-align: center;
 
 }
 .main-content {
     grid-area: main-content;
     background-color: #fff;
     padding: 20px;
+    flex-direction: row;
+    display: inline-flex;
 }
 .footer {
     grid-area: footer;
@@ -47,4 +51,31 @@ ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de
     color: white;
     text-align: center;
     padding: 10px;
+}
+
+.img img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin : 50px;
+}
+p {
+    font-size: 1.3em;
+    font-family: Arial, sans-serif;
+    color: #333;
+    text-align: center;
+}
+#categorias {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+}
+h2{
+ font-size: 2rem;
+ font-family:'Times New Roman', Times, serif
 }
