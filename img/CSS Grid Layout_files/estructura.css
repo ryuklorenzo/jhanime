@@ -74,10 +74,10 @@ p {
 .categorias {
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin: 20px;
 
 }
 h2{
  font-size: 2rem;
- font-family:'Times New Roman', Times, serif;
+ font-family:'Times New Roman', Times, serif
 }
