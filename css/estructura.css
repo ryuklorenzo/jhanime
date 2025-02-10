@@ -1,83 +1,144 @@
+:root {
+    --color-fondo: #f5f5f5; /*voy a poner este color que esta mas visual*/
+    --barra-1: #d17c37; /*color cualquiera para la barra, me es igual cual*/
+    --barra-2: #726f6f; /*una sombrica a los efectos*/
+    --series-color-fondo: #ffd68a; /*este para las tarjetas de los animes para que resalte algo*/
+    --text-color: #333; /*un negro o gris para el texto*/
+    --font-family-texto: 'Arial', sans-serif;
+    --font-family-titulos: 'Times New Roman', Times, serif;
+}
 
-/* Se aplica a todos los elementos  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html{
-    /* para ver el diseño de la web, útli para depurar*/
-    background-color: red;
+
+html {
+    background-color: var(--color-fondo);
 }
-/* Contenedor principal
-ahora se aplica a todos los dispostivos, aunque corresponde al tamaño grande de la pantalla */
+
+/* Contenedor principal */
 .grid-container {
     display: grid;
     grid-template-areas:
         "barra1 barra2"
         "main-content main-content"
         "footer footer";
-    grid-template-rows: 10vh 1fr auto; /* Altura: encabezado, contenido flexible, pie */
-    grid-template-columns: 5fr 1fr;/*250px 1fr; /* Ancho: barra lateral fija, contenido flexible */
+    grid-template-rows: 10vh 1fr auto;
+    grid-template-columns: 5fr 1fr;
     min-height: 100vh;
-    margin-left: 2vh;
-    margin-right: 2vh ;
+    margin: 2vh;
+    gap: 10px;
 }
 
-/* Estilo para las áreas */
+/*estilos de las barras de busqueda, la 1 es la grande y 2 la pequeña*/
 #barra1 {
     grid-area: barra1;
-    background-color: #4CAF50;
+    background-color: var(--barra-1);
     color: white;
-    text-align: left;
     text-align: center;
-    align-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
 }
+
 #barra2 {
     grid-area: barra2;
-    background-color: #f4f4f4;
-    text-align: center;
-    align-content: center;
+    background-color: var(--barra-2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    border-radius: 10px;
 }
+
+/*el main content es donde va todo y el footer lo dejamos sencillito*/
 .main-content {
     grid-area: main-content;
     background-color: #fff;
     padding: 20px;
-    flex-direction: row;
-    display: block; /* Para que no se superpongan los elementos */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .footer {
     grid-area: footer;
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+/*aqui para las series, si te gusta de otra forma lo cambias tu*/
+.div {
+    background-color: var(--series-color-fondo);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/*de efecto dejo el hover que es el que dimos el año pasado, asi que se levanta*/
+.div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
 }
 
 .div img {
-    width: 200px;
+    max-width: 100%;
     height: 200px;
     border-radius: 10px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin : 50px;
+    object-fit: cover;
 }
+
 p {
-    font-size: 1.3em;
-    font-family: Arial, sans-serif;
-    color: #333;
+    font-size: 1.2em;
+    font-family: var(--font-family-texto);
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    font-family: var(--font-family-titulos);
+    margin-bottom: 15px;
+    color: #222;
     text-align: center;
 }
-.categorias {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
 
+/*abajo por ultimo hacemos los media queris*/
+/* contenedor de las diferentes series que estan en divs */
+.categorias {
+    display: grid;
+    gap: 20px;
+    justify-content: center;
 }
-h2{
- font-size: 2rem;
- font-family:'Times New Roman', Times, serif;
+
+/* el media queri grande en 3 columnas */
+@media (min-width: 1024px) {
+    .categorias {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* el media queri mediano en 2 columnas */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* el media queri pequeño en 1 columna */
+@media (max-width: 767px) {
+    .categorias {
+        grid-template-columns: 1fr;
+    }
 }
