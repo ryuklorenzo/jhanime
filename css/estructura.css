@@ -1,9 +1,14 @@
 :root {
-    --color-fondo: #f5f5f5; /*voy a poner este color que esta mas visual*/
-    --barra-1: #d17c37; /*color cualquiera para la barra, me es igual cual*/
-    --barra-2: #726f6f; /*una sombrica a los efectos*/
-    --series-color-fondo: #ffd68a; /*este para las tarjetas de los animes para que resalte algo*/
-    --text-color: #333; /*un negro o gris para el texto*/
+    --color-fondo: #f5f5f5;
+    /*voy a poner este color que esta mas visual*/
+    --barra-1: #d17c37;
+    /*color cualquiera para la barra, me es igual cual*/
+    --barra-2: #726f6f;
+    /*una sombrica a los efectos*/
+    --series-color-fondo: #ffd68a;
+    /*este para las tarjetas de los animes para que resalte algo*/
+    --text-color: #333;
+    /*un negro o gris para el texto*/
     --font-family-texto: 'Arial', sans-serif;
     --font-family-titulos: 'Times New Roman', Times, serif;
 }
@@ -141,4 +146,39 @@ h2 {
     .categorias {
         grid-template-columns: 1fr;
     }
+}
+
+.icon-container {
+    display: flex;
+    gap: 30px;
+}
+
+.icon-container svg {
+    transition: fill 0.3s ease;
+    fill: currentColor;
+}
+.icon-container svg:hover {
+    fill: red;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+footer p {
+    text-align: center;
+    padding: 5px;
+    color: white;
+    margin: 2px 0;
+    font-size: 12px;
+}
+
+footer a {
+    margin: 0 5px;
+    color: white;
+    text-decoration: none;
+    font-size: 12px;
 }
