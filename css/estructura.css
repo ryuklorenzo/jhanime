@@ -61,6 +61,13 @@ html {
     border-radius: 10px;
 }
 
+/*esto para que hagan scroll con la pagina*/
+#barra1, #barra2 {
+    position: sticky;
+    top: 0;
+    z-index: 100; 
+}
+
 /*el main content es donde va todo y el footer lo dejamos sencillito*/
 .main-content {
     grid-area: main-content;
@@ -68,6 +75,7 @@ html {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 
 .footer {
@@ -90,6 +98,41 @@ html {
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
 }
+
+
+/*aqui he agregado un id para la pagina de detalle porque no me gustaba nada como quedaba con el formato del index
+se quedaba como muy grande la etiqueta naranja*/
+#div_detalle {
+    background-color: var(--series-color-fondo);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    margin: 15px auto;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+#div_detalle img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    display: block; 
+}
+
+#div_detalle ~ p {
+    font-size: 14px;
+    font-family: var(--font-family-texto);
+    color: var(--text-color);
+    font-weight: bold; 
+    font-style: italic;
+    max-width: 90%;
+    margin: 15px auto; 
+    text-align: justify; 
+}
+
 
 /*de efecto dejo el hover que es el que dimos el año pasado, asi que se levanta*/
 .div:hover {
@@ -179,6 +222,14 @@ button:hover {
 }
 .icon-container svg:hover {
     fill: red;
+}
+#barra1 a, #barra2 a {
+    color: white;
+}
+
+.categorias a {
+    text-decoration: none;
+    color: black;
 }
 
 footer p {
