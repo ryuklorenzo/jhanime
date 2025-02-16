@@ -1,9 +1,14 @@
 :root {
-    --color-fondo: #f5f5f5; /*voy a poner este color que esta mas visual*/
-    --barra-1: #d17c37; /*color cualquiera para la barra, me es igual cual*/
-    --barra-2: #726f6f; /*una sombrica a los efectos*/
-    --series-color-fondo: #ffd68a; /*este para las tarjetas de los animes para que resalte algo*/
-    --text-color: #333; /*un negro o gris para el texto*/
+    --color-fondo: #f5f5f5;
+    /*voy a poner este color que esta mas visual*/
+    --barra-1: #d17c37;
+    /*color cualquiera para la barra, me es igual cual*/
+    --barra-2: #726f6f;
+    /*una sombrica a los efectos*/
+    --series-color-fondo: #ffd68a;
+    /*este para las tarjetas de los animes para que resalte algo*/
+    --text-color: #333;
+    /*un negro o gris para el texto*/
     --font-family-texto: 'Arial', sans-serif;
     --font-family-titulos: 'Times New Roman', Times, serif;
 }
@@ -112,6 +117,55 @@ h2 {
     margin-bottom: 15px;
     color: #222;
     text-align: center;
+}
+
+
+/*algo de estilo para el formulario que sino queda muy soso*/
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    align-items: center;
+}
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--barra-1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b5651d;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 1.2rem;
 }
 
 /*abajo por ultimo hacemos los media queris*/
